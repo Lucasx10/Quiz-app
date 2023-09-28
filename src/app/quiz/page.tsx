@@ -47,7 +47,6 @@ export default function PageQuiz() {
     const [hasSwitchedTab, setHasSwitchedTab] = useState(false);
     const [disqualified, setDisqualified] = useState(false);
 
-
     useEffect(() => {
         const handleTabSwitch = () => {
             if (hasSwitchedTab) {
@@ -246,22 +245,12 @@ export default function PageQuiz() {
                             >
                                 Restart
                             </button>
-                            {showAddQuestionButton && (
-                                <button className={`
-                                    bg-blue-400 text-white font-bold 
-                                    py-2 px-4 rounded-full select-none
-                                `}
-                                    /*onClick={() => router.push("/adicionar-pergunta")}*/ // Substituir com o caminho correto
-                                >
-                                    Adicionar Pergunta
-                                </button>
-                            )}
                         </div>
                         {disqualified && (
-                                <div className="text-red-500">
-                                    Você foi desclassificado por sair mais de 2 vezes da aba do quiz.
-                                </div>
-                            )}
+                            <div className="text-red-500">
+                                Você foi desclassificado por sair mais de 2 vezes da aba do quiz.
+                            </div>
+                        )}
                     </div>
                 )}
             </div>

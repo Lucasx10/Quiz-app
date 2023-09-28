@@ -1,6 +1,7 @@
 "use client";
 
 import { useGlobalContext } from "@/context/main";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEventHandler, useState } from "react";
 
@@ -58,6 +59,15 @@ export default function Home() {
           >
             Start Quiz
           </button>
+          <button
+            type="button"
+            onClick={() => router.push("/questions")}
+            style={{ backgroundColor: "#0097a7" }}
+            className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            Adicionar Pergunta
+          </button>
+
         </form>
       </div>
     </main>
